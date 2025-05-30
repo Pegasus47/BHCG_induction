@@ -42,7 +42,7 @@ c:\Users\Cartuln\BHCG\BHCG-Induction\src
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/Pegasus47/BHCG-Induction.git
+   git clone https://github.com/Pegasus47/BHCG_induction.git
    cd BHCG-Induction
    ```
 
