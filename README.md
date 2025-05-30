@@ -1,54 +1,67 @@
-# React + TypeScript + Vite
+# BHCG Induction Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React application built using Vite that displays a carousel of resources grouped by week(Wasn't sure about the tabular form so went with what I felt seemed best). The application includes custom UI components for cards, carousels, dialogs, and separators. It also handles error states by displaying a message when no data is available. 
 
-Currently, two official plugins are available:
+## Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+c:\Users\Cartuln\BHCG\BHCG-Induction\src
+│
+├── App.tsx    // Main application component that renders the cards and handles modal video playback.
+├── index.css         // Global styles, including Tailwind CSS configuration.
+├── main.tsx            // Application entry point.
+├── components/
+│   ├── cardCarousel.tsx   // Contains the Minicard component that renders the resource carousel.
+│   ├── customCard.tsx   // Wraps Minicard in a card layout and displays the week label.
+│   └── ui/         // Contains all the SHADCN components 
+└── lib/
+   └── data.ts         // Sample data grouped by weeks.
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Features
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Resource Carousel:** Displays resources (articles and videos) in a carousel layout.
+- **Custom Cards:** Each week is represented by a custom card that holds a carousel of resources. If no resources exist for a week, an error message with an icon is shown.
+- **Responsive UI:** Uses Tailwind CSS for styling and responsiveness.
+- **Video Modal:** Clicking on a video resource opens it in a modal window.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) (v14 or later recommended)
+- Package manager: pnpm
+- If you do not have pnpm use the following to install it.
+  ```bash
+  npm install -g pnpm@latest-10
+  ```
+
+## Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/Pegasus47/BHCG-Induction.git
+   cd BHCG-Induction
+   ```
+
+2. **Install dependencies:**
+
+   Using pnpm:
+   ```bash
+   pnpm i -r
+   ```
+## Running the Application
+
+Start the development server:
+
+Using pnpm:
+```bash
+pnpm run dev
 ```
+
+Then open your browser and navigate to [http://localhost:5173](http://localhost:5173) (or the port indicated in the terminal as it might be different for you) to see the application running.
+
+## Additional Notes
+
+- **Data Handling:** The resource data is stored in the [`lib/data.ts`](./lib/data.ts) file and is grouped by week. If no resources exist, the application displays an error message with an icon.
+- **UI Components:** Custom UI components are located in the [`components/ui/`](./components/ui) directory. These components provide the styling and layout functionality for cards, carousels, dialogs, and more.
+- **Utilities:** Utility functions, such as the `cn` function for merging Tailwind classes, are in [`lib/utils.ts`](./lib/utils.ts).
