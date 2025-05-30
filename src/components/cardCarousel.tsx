@@ -44,7 +44,7 @@ export default function Minicard({ items, onCardClick }: Props) {
               onClick={() => onCardClick(resource)}
             >
                 <CardHeader>
-                {resource.type === "article" && <BookText className="text-cyan-300" />}
+                {resource.type === "article" && <BookText className="text-cyan-300" />} {/* To display icons for articles and videos*/} 
                 {resource.type === "video" && <Video className="text-rose-400" />}
 
                 <CardTitle className="text-cyan-100 text-base font-semibold">

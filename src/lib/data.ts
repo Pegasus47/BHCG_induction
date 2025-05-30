@@ -1,3 +1,6 @@
+//stores the dummy data here for now
+//DISCLAIMER: All links might not work as it was AI-generated
+//For testing puposes the first few links works so feel free to use them
 export const resources = {
   "Week 1": [
     {

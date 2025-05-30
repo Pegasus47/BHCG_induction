@@ -13,7 +13,7 @@ export default function CustomCard({ week, items, onCardClick }: Props) {
     <div className="my-4 mx-8 min-w-3/4">
       <Card className="bg-slate-800">
         <CardHeader>
-          <CardTitle className="text-lg text-cyan-100">{week}</CardTitle>
+          <CardTitle className="text-lg text-cyan-100">{week}</CardTitle> {/* This Card will hold weekly data*/}
         </CardHeader>
         <CardContent>
           <Minicard items={items} onCardClick={onCardClick} />
