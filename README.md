@@ -2,6 +2,9 @@
 
 This project is a React application built using Vite that displays a carousel of resources grouped by week(Wasn't sure about the tabular form so went with what I felt seemed best). The application includes custom UI components for cards, carousels, dialogs, and separators. It also handles error states by displaying a message when no data is available. 
 
+![https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXB2YnN4YnI3ZGRzOWxreWZocDhjYnN0bm1xcm5wdGt4cjZibTU4eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EOawn1aJKf221rUfCP/giphy.gif)
+
+
 ## Project Structure
 
 ```
